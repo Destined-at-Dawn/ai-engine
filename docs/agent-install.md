@@ -1,6 +1,6 @@
 # Agent installation guide
 
-niuma-engine is modular. Start with one rule in a disposable project, validate the behavior you expect, then add more rules deliberately.
+ai-engine is modular. Start with one rule in a disposable project, validate the behavior you expect, then add more rules deliberately.
 
 ## 1. Choose a rule
 
@@ -16,27 +16,27 @@ niuma-engine is modular. Start with one rule in a disposable project, validate t
 Clone this repository first:
 
 ```bash
-git clone https://github.com/Destined-at-Dawn/niuma-engine.git
+git clone https://github.com/Destined-at-Dawn/ai-engine.git
 ```
 
 ### Claude Code
 
 ```bash
 mkdir -p YOUR_PROJECT/.claude/rules
-cp niuma-engine/.claude/rules/no-blind-overwrite.md YOUR_PROJECT/.claude/rules/
+cp ai-engine/.claude/rules/no-blind-overwrite.md YOUR_PROJECT/.claude/rules/
 ```
 
 Windows PowerShell:
 
 ```powershell
 New-Item -ItemType Directory -Force YOUR_PROJECT\.claude\rules
-Copy-Item niuma-engine\.claude\rules\no-blind-overwrite.md YOUR_PROJECT\.claude\rules\
+Copy-Item ai-engine\.claude\rules\no-blind-overwrite.md YOUR_PROJECT\.claude\rules\
 ```
 
 To adopt the whole ruleset, copy the directory after reviewing its contents:
 
 ```bash
-cp -r niuma-engine/.claude/rules YOUR_PROJECT/.claude/
+cp -r ai-engine/.claude/rules YOUR_PROJECT/.claude/
 ```
 
 ### Codex
@@ -55,7 +55,7 @@ Start a fresh agent session and run these checks in a throwaway project:
 
 1. Ask the agent to modify an existing file. With `no-blind-overwrite.md` active, it should inspect the current content before editing.
 2. Give the agent an unusually strong metric and ask for a conclusion. With `anti-illusion-audit.md` active, it should ask how the metric was produced.
-3. Ask which niuma-engine rules are active. The agent should identify only the files you installed.
+3. Ask which ai-engine rules are active. The agent should identify only the files you installed.
 
 If the behavior differs, verify that the target tool loads the configured project instructions. Integration mechanics differ by agent and version.
 

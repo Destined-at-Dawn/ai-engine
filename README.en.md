@@ -1,16 +1,16 @@
-# niuma-engine
+# ai-engine
 
 > **An engineering-discipline framework for AI coding agents: reusable rules and adapters, not an agent runtime.**
 
 English · [中文](README.md) · [Capabilities](docs/capabilities.md) · [Install](docs/agent-install.md) · [Compatibility](docs/compatibility.md) · [Contributing](CONTRIBUTING.md)
 
-niuma-engine turns recurring failure modes in AI-assisted development—blind file overwrites, weak verification, suspicious metrics, multi-agent conflicts, and repeated dead ends—into reviewable Markdown rules and agent-integration guidance.
+ai-engine turns recurring failure modes in AI-assisted development—blind file overwrites, weak verification, suspicious metrics, multi-agent conflicts, and repeated dead ends—into reviewable Markdown rules and agent-integration guidance.
 
 ## What it is / is not
 
 | It is | It is not |
 |---|---|
-| 34 composable engineering-discipline rules | An executable agent runtime, CLI, or background service |
+| 47 composable engineering-discipline rules plus a reference tool for multi-agent coordination | An executable agent runtime or background service |
 | A Claude Code rules directory plus integration guidance for Codex, Cursor, Aider, and Gemini CLI | A plug-in that automatically creates backups, schedules jobs, or merges branches |
 | An open framework for discussing and improving AI engineering workflows | Prompt magic that makes a model smarter |
 
@@ -21,9 +21,9 @@ See [Capabilities](docs/capabilities.md) for the boundary between shipped assets
 For Claude Code, install one minimal rule in a test project:
 
 ```bash
-git clone https://github.com/Destined-at-Dawn/niuma-engine.git
+git clone https://github.com/Destined-at-Dawn/ai-engine.git
 mkdir -p YOUR_PROJECT/.claude/rules
-cp niuma-engine/.claude/rules/no-blind-overwrite.md YOUR_PROJECT/.claude/rules/
+cp ai-engine/.claude/rules/no-blind-overwrite.md YOUR_PROJECT/.claude/rules/
 ```
 
 Start a new agent session and ask it to modify an existing file. It should read the file first and describe the planned change before writing. The [installation guide](docs/agent-install.md) includes verification steps, Windows commands, and setup instructions for other agents.
@@ -38,8 +38,14 @@ Start a new agent session and ask it to modify an existing file. It should read 
 | AI reports implausibly good numbers | `anti-illusion-audit.md` |
 | AI says “done” without enough verification | `10-engineering-laws.md`, `lifecycle-sop.md` |
 | The same failure keeps recurring | `negative-results.md` |
-| Multiple agents conflict | `agent-prompt-ironclad.md`, `subagent-strategy.md` |
-| You want the full rule set | `.claude/rules/` (34 rule files) |
+| Multiple agents conflict | `multi-agent-coordination.md` + `tools/agent-coord/`, `agent-prompt-ironclad.md` |
+| AI edits an old revision, or fixes only one of several related numbers | `version-baseline-check.md`, `metric-family-alignment.md` |
+| “Works locally” gets reported as “released” | `harness-evidence-states.md`, `delivery-acceptance-layers.md` |
+| Sub-agents are abandoned halfway, or results live only in a temp folder | `subagent-must-return.md`, `session-close-handoff.md` |
+| AI changes the workflow because it “seems better” | `rule-change-audit.md` |
+| Backup jobs stay green while nothing reaches the remote | `backup-signal-trust.md` |
+| AI-drafted public content leaks internal notes or other people's names | `public-content-hygiene.md` |
+| You want the full rule set | `.claude/rules/` (47 rule files) |
 
 ## Support status
 
@@ -56,10 +62,11 @@ Start a new agent session and ask it to modify an existing file. It should read 
 ## Repository layout
 
 ```text
-niuma-engine/
-├── .claude/rules/       # 34 core Markdown rules
+ai-engine/
+├── .claude/rules/       # 47 core Markdown rules
+├── tools/agent-coord/   # Multi-agent coordination reference tool (stdlib Python + self-test)
 ├── adapters/            # Integration examples per agent
-├── docs/                # Install, capabilities, compatibility, and philosophy
+├── docs/                # Install, capabilities, compatibility, philosophy, and case studies
 ├── templates/           # Memory templates in Chinese and English
 ├── CONTRIBUTING.md
 ├── SECURITY.md
@@ -75,7 +82,7 @@ niuma-engine/
 
 ## Version and evolution
 
-The current public ruleset is **v5.1.0 / 34 rule files**. See [CHANGELOG.md](CHANGELOG.md) for history. Release notes are available in GitHub Releases.
+The current public ruleset is **v5.2.0 / 47 rule files**. v5.2.0 adds 13 rules, the `tools/agent-coord/` reference tool, and 3 sanitized incident patterns; see [CHANGELOG.md](CHANGELOG.md). See [CHANGELOG.md](CHANGELOG.md) for history. Release notes are available in GitHub Releases.
 
 ## License
 

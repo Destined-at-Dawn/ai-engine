@@ -31,6 +31,9 @@ for (const path of [
   "adapters/codex.md",
   "adapters/codex/AGENTS.md.example",
   ".github/PULL_REQUEST_TEMPLATE.md",
+  "tools/agent-coord/coord.py",
+  "tools/agent-coord/test_coord.py",
+  "tools/agent-coord/README.md",
 ]) {
   if (!existsSync(join(root, path))) errors.push(`Required community or documentation file is missing: ${path}`);
 }
@@ -42,8 +45,11 @@ const currentFacingDocs = [
   "docs/compatibility.md",
   "docs/philosophy.md",
   "adapters/codex.md",
+  "adapters/cursor.md",
+  "adapters/gemini-cli.md",
+  "docs/capabilities.md",
 ];
-const staleCurrentState = /(?:niuma-engine\s+v4\.0|v4\.0\s*\(29\s*rules?\)|\b29\s+(?:rules?|条规则)\b|\b33\s+(?:rules?|条规则)\b)/iu;
+const staleCurrentState = /(?:niuma-engine\s+v4\.0|v4\.0\s*\(29\s*rules?\)|\b29\s+(?:rules?|条规则)\b|\b3[34]\s+(?:rules?|条规则|个规则文件|Markdown rule files)\b|v5\.[01]\.0\s*\/\s*34)/iu;
 for (const path of currentFacingDocs) {
   const text = readFileSync(join(root, path), "utf8");
   if (staleCurrentState.test(text)) errors.push(`Stale current-state wording found in ${path}.`);

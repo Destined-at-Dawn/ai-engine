@@ -2,6 +2,44 @@
 
 ## Unreleased
 
+## v5.2.0 (2026-11-11) — Evidence states and multi-agent coordination
+
+Distilled from three months of daily multi-tool work (Claude Code, Codex and others) across document, research-paper and product workspaces. All material is generalized and sanitized; no project data, names, paths or credentials are included.
+
+### Added — rules (13, total 47)
+
+#### Edit integrity
+- `version-baseline-check.md` — list candidates, confirm the newest revision and record the baseline hash before editing a versioned deliverable.
+- `metric-family-alignment.md` — realign every value of a metric family from raw evidence; check denominators; finish with a zero-hit residual scan.
+- `shell-text-integrity.md` — keep persisted text out of shell-embedded strings (backtick substitution, backslash escapes in paths); read back after writing.
+
+#### Evidence and delivery
+- `harness-evidence-states.md` — state ladder (`SOURCE_ONLY` → `LOCAL_ONLY` → `BUILD_VERIFIED` → `DEVICE_VERIFIED` → `PUBLISHED`), blue/red/first-principles roles, fleet conditions, completion gate.
+- `delivery-acceptance-layers.md` — document deliverables L1–L4 and software source/build/deploy/real-use layers, each verified separately.
+- `agent-autoloop.md` — one verifiable goal per round; end the round instead of waiting when a human decision is needed; hop limits.
+- `rule-change-audit.md` — one change at a time, same-condition baseline, recorded adopt/rollback/insufficient-evidence verdict.
+
+#### Agent coordination
+- `multi-agent-coordination.md` — lease before editing shared deliverables, allocator for revision numbers, append-only registry, rules every tool must follow live in `AGENTS.md`.
+- `subagent-must-return.md` — collect and verify launched sub-agents; write the handoff before a long run; protect active sub-agent directories from cleanup.
+
+#### Continuity and operations
+- `session-close-handoff.md` — five-step session close plus `work-logs/HANDOFF-INDEX.md` with final-evidence status.
+- `task-state-sync.md` — executed, marked and verified are three separate conditions.
+- `backup-signal-trust.md` — scheduler state and exit codes are not evidence; only the remote is; non-zero exit on failure; alert after 24 hours.
+- `public-content-hygiene.md` — public / authorized / internal tiers, anonymized references to other people, only publicly reachable links, direct wording without defensive filler.
+
+### Added — tools
+- `tools/agent-coord/` — the repository's first executable artifact: a standard-library Python CLI (`init`, `status`, `claim`, `release`, `next-rev`, `log`, `doctor`) with a self-test (`test_coord.py`, 7 tests).
+
+### Added — case studies
+- `silent-backup-failure.md`, `half-corrected-metrics.md`, `parallel-agents-duplicate-revision.md`.
+
+### Changed
+- Project name in all current documentation aligned with the repository name `ai-engine` (formerly `niuma-engine`; GitHub redirects the old URL). Codex adapter folder renamed from `.niuma-engine/rules` to `.ai-engine/rules`.
+- `CLAUDE.md`, both READMEs, `docs/capabilities.md`, `docs/compatibility.md`, Cursor and Gemini CLI adapters updated to v5.2.0 / 47 rule files; Cursor and Gemini adapters no longer claim 29 rules.
+- `verify-docs.mjs` now also checks the adapters, `docs/capabilities.md`, the coordination tool files, and stale "34 rules" wording.
+
 ## v5.1.0 (2026-08-12) — OSS credibility foundation
 
 ### Changed

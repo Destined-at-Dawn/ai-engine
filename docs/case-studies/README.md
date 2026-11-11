@@ -1,6 +1,6 @@
 # Case studies
 
-Case studies are the evidence layer of niuma-engine. A case should explain a real failure pattern without exposing private data, credentials, proprietary source code, or identifiable third parties.
+Case studies are the evidence layer of ai-engine. A case should explain a real failure pattern without exposing private data, credentials, proprietary source code, or identifiable third parties.
 
 ## Case template
 
@@ -17,7 +17,7 @@ What happened, and what was the observable impact?
 Why did the existing workflow fail to catch it?
 
 ## Rule or change
-Which niuma-engine rule was added or changed? Link to the file.
+Which ai-engine rule was added or changed? Link to the file.
 
 ## Verification
 How can another maintainer test whether the rule changes the workflow?
@@ -35,3 +35,6 @@ These are maintainer-reported and sanitized incident patterns. They describe the
 - [An update erased the surrounding document](blind-overwrite.md)
 - [A strong metric survived without an audit trail](unverified-metric.md)
 - [A sub-agent returned an unusable investigation](underspecified-subagent.md)
+- [A backup job reported success while nothing was being pushed](silent-backup-failure.md)
+- [Fixing one number made the document consistently wrong](half-corrected-metrics.md)
+- [Two agents produced the same revision in parallel](parallel-agents-duplicate-revision.md)

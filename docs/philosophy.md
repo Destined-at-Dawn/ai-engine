@@ -2,7 +2,7 @@
 
 ## A discipline framework for AI-assisted engineering
 
-niuma-engine encodes recurring engineering failure patterns as reviewable rules. Its goal is not to make a coding model smarter; its goal is to make important workflow expectations explicit: inspect before changing, verify before declaring completion, record dead ends, and isolate concurrent work.
+ai-engine encodes recurring engineering failure patterns as reviewable rules. Its goal is not to make a coding model smarter; its goal is to make important workflow expectations explicit: inspect before changing, verify before declaring completion, record dead ends, and isolate concurrent work.
 
 ## How a rule should earn its place
 

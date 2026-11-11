@@ -2,12 +2,15 @@
 
 This page separates what the repository ships today from patterns that need implementation in your own environment. It is the source of truth for public capability claims.
 
-**Last reviewed:** 2026-08-11  
-**Current ruleset:** v5.0.0 / 34 Markdown rule files
+**Last reviewed:** 2026-11-11  
+**Current ruleset:** v5.2.0 / 47 Markdown rule files
 
 | Capability | Public artifact | Status | What this means |
 |---|---|---|---|
-| Core engineering rules | `.claude/rules/` | Shipped | 34 Markdown rule files that can be copied or adapted into a project. |
+| Core engineering rules | `.claude/rules/` | Shipped | 47 Markdown rule files that can be copied or adapted into a project. |
+| Multi-agent coordination tool | `tools/agent-coord/` | Shipped reference tool | Standard-library Python CLI with lease, append-only registry, revision allocator and `doctor`, plus a self-test. The lease is advisory; it does not lock files at the OS level. |
+| Evidence states and layered acceptance | `harness-evidence-states.md`, `delivery-acceptance-layers.md` | Reference policy | State names and acceptance layers are defined; the checks for each layer (build, device, platform read-back) are implemented by the adopter. |
+| Backup signal trust | `backup-signal-trust.md` | Reference policy | Defines which evidence proves a backup; no backup scripts or alerting are shipped. |
 | Claude Code setup | `.claude/rules/`, `CLAUDE.md` | Documented integration | The repository contains the rule directory and a root guide; test it in a disposable project before relying on it. |
 | Codex setup | `adapters/codex.md`, `adapters/codex/AGENTS.md.example` | Documented integration | Copy selected rules into your project and reference them from `AGENTS.md`. |
 | Cursor, Aider, Gemini CLI setup | `adapters/` | Documented integration | Instructions are provided, but compatibility is not continuously guaranteed. |

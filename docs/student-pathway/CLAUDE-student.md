@@ -1,4 +1,4 @@
-# Student Mode Addendum（插入 niuma-engine CLAUDE.md 的 Step 0）
+# Student Mode Addendum（插入 ai-engine CLAUDE.md 的 Step 0）
 
 > 这段内容供解压后的 AI 使用，学员不需要读这个文件。
 > 检测到 `STUDENT-GUIDE.md` 存在于工作区根目录 → 激活以下行为，插入原 Startup Sequence 的 Step 0。

@@ -9,8 +9,8 @@ Gemini CLI discovers `.md` files in the project root as context.
 1. Create `GEMINI.md` in project root:
 
 ```markdown
-> Engineering framework: niuma-engine v4.0 (29 rules).
-> Rule files are in .claude/rules/ — 10 core laws + 19 specialized rules.
+> Engineering framework: ai-engine v5.2.0 (47 rule files).
+> Rule files are in .claude/rules/.
 > See CLAUDE.md for the startup sequence and core principles.
 
 ## Key Rules (summary)
@@ -25,4 +25,4 @@ Gemini CLI discovers `.md` files in the project root as context.
 
 ### Notes
 - Gemini CLI's context discovery is loose — inline the most critical rules in GEMINI.md
-- Full rule set: 29 files in `.claude/rules/` (~124KB total)
+- Full rule set: 47 files in `.claude/rules/`

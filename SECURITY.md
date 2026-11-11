@@ -11,7 +11,7 @@ Maintainers should enable GitHub Private Vulnerability Reporting before promotin
 
 ## Scope
 
-niuma-engine is primarily a documentation and rules repository. Security reports may still apply to any future automation scripts, GitHub Actions workflows, installers, templates, or dependency updates included in the repository.
+ai-engine is primarily a documentation and rules repository. Security reports may still apply to any future automation scripts, GitHub Actions workflows, installers, templates, or dependency updates included in the repository.
 
 ## Response expectations
 
