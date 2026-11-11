@@ -88,6 +88,22 @@ New skills must meet the standard: 6 top-level files + 5+ references + 1+ script
 Activates only when `STUDENT-GUIDE.md` exists in workspace root. Term bridging, next-step hooks, no overreach tasks, no proactive architecture exposure.
 -> See `.claude/rules/student-onboarding.md`, `docs/student-pathway/`
 
+## Before Editing a Versioned Deliverable (v5.2 NEW)
+List candidates, confirm the newest revision, record the baseline hash. When a measured value changes, realign the whole metric family from raw evidence.
+-> See `.claude/rules/version-baseline-check.md`, `.claude/rules/metric-family-alignment.md`
+
+## Evidence States and Delivery Layers (v5.2 NEW)
+SOURCE_ONLY / LOCAL_ONLY / BUILD_VERIFIED / DEVICE_VERIFIED / PUBLISHED are separate states. Generated, opened, and deployed are separate layers.
+-> See `.claude/rules/harness-evidence-states.md`, `.claude/rules/delivery-acceptance-layers.md`, `.claude/rules/agent-autoloop.md`
+
+## Multi-Agent Workspaces (v5.2 NEW)
+Status first, claim before editing shared deliverables, allocate revisions with a tool, doctor last. Rules every tool must follow go into AGENTS.md.
+-> See `.claude/rules/multi-agent-coordination.md`, `tools/agent-coord/`, `.claude/rules/subagent-must-return.md`
+
+## Session Close (v5.2 NEW)
+Write context, state, decisions, negative results and a restart prompt; register it in work-logs/HANDOFF-INDEX.md.
+-> See `.claude/rules/session-close-handoff.md`, `.claude/rules/task-state-sync.md`
+
 ---
 
 # Compact Instructions
@@ -119,7 +135,10 @@ Activates only when `STUDENT-GUIDE.md` exists in workspace root. Term bridging, 
 | Cross-Tool Governance (v5.0 NEW) | knowledge-hub-architecture, scheduled-task-dual-redundancy | Single truth source + dual redundancy |
 | Skill Quality (v5.0 NEW) | skill-quality-benchmark | New skills meet benchmark standard |
 | Student Onboarding (v5.0 NEW) | student-onboarding | Self-gating layer for AI-course students; see docs/student-pathway/ |
-| Agent Management | agent-prompt-ironclad, subagent-strategy, agent-concurrency-fallback | Multi-agent coordination |
+| Agent Management | agent-prompt-ironclad, subagent-strategy, agent-concurrency-fallback, subagent-must-return, multi-agent-coordination | Multi-agent coordination |
+| Evidence & Delivery (v5.2 NEW) | harness-evidence-states, delivery-acceptance-layers, agent-autoloop, rule-change-audit | State ladder, layered acceptance, finite loops, audited rule changes |
+| Edit Integrity (v5.2 NEW) | version-baseline-check, metric-family-alignment, shell-text-integrity | Right file, whole metric family, no silent shell corruption |
+| Continuity & Ops (v5.2 NEW) | session-close-handoff, task-state-sync, backup-signal-trust, public-content-hygiene | Handoffs, real task state, backup evidence, public writing |
 | Search & Info | search-decision-tree, lesson-auto-update, anti-info-overload | Information discipline |
 | Safety & Ops | script-safety-check, no-blind-overwrite, chinese-path-safety, powershell-safety, pre-action-check, git-recovery, mcp-config-protocol | Prevention of known accidents |
 | Memory & Quality | memory-candidate-protocol, memory-confidence, negative-results, anti-illusion-audit, boundary-declaration | Truth maintenance |
@@ -129,5 +148,5 @@ Activates only when `STUDENT-GUIDE.md` exists in workspace root. Term bridging, 
 ---
 
 > This framework is alive. Rules grow from real accidents. Each rule blocks one confirmed failure pattern.
-> v5.0: 34 rules. From single-tool discipline to cross-tool ecosystem.
+> v5.2: 47 rules. From cross-tool ecosystem to evidence states and multi-agent coordination.
 > You are looking at a snapshot. The framework updates as new patterns are recognized in production.

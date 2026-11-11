@@ -1,6 +1,6 @@
 # Contributing
 
-Thanks for improving niuma-engine. High-quality contributions make rules easier to understand, test, adapt, and maintain.
+Thanks for improving ai-engine. High-quality contributions make rules easier to understand, test, adapt, and maintain.
 
 ## Before you start
 

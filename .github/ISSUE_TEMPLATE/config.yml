@@ -1,8 +1,8 @@
 blank_issues_enabled: false
 contact_links:
   - name: Usage questions and ideas
-    url: https://github.com/Destined-at-Dawn/niuma-engine/discussions
+    url: https://github.com/Destined-at-Dawn/ai-engine/discussions
     about: Use Discussions after the maintainer enables it for questions, ideas, and experience reports.
   - name: Security reports
-    url: https://github.com/Destined-at-Dawn/niuma-engine/security
+    url: https://github.com/Destined-at-Dawn/ai-engine/security
     about: Do not file security-sensitive details in a public Issue.

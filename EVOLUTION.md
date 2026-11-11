@@ -19,7 +19,7 @@ Each time a new failure pattern is discovered in your projects:
 
 If you discover a failure pattern and create a rule that isn't in this repo:
 1. Sanitize it (remove personal paths/info)
-2. Open a PR to `niuma-engine`
+2. Open a PR to `ai-engine`
 3. Add it to the evolution log above
 
 ## Rule Upgrade Path
@@ -27,7 +27,7 @@ If you discover a failure pattern and create a rule that isn't in this repo:
 ```
 Single incident -> Write it in memory/{date}.md
 Same incident 2+ times -> Create/update a rule in .claude/rules/
-Incident pattern across projects -> Propose addition to niuma-engine
+Incident pattern across projects -> Propose addition to ai-engine
 ```
 
 ---

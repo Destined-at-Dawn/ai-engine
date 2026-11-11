@@ -54,5 +54,5 @@
 ---
 
 > 创建日期：2026-07-09
-> 来源：niuma-engine v5.0 学员成长路线图设计
+> 来源：ai-engine v5.0 学员成长路线图设计
 > 关联：CLAUDE-student.md, outputs/student-pathway/*.md

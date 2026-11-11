@@ -1,14 +1,14 @@
 # Project engineering guide
 
-This project uses a small, project-local niuma-engine ruleset.
+This project uses a small, project-local ai-engine ruleset.
 
 ## Active rules
 
 Read these files before making a relevant change:
 
-- `.niuma-engine/rules/no-blind-overwrite.md` — read an existing file before modifying it.
-- `.niuma-engine/rules/think-before-act.md` — classify non-trivial work and state the plan before implementation.
-- `.niuma-engine/rules/anti-illusion-audit.md` — audit unusually strong metrics before relying on them.
+- `.ai-engine/rules/no-blind-overwrite.md` — read an existing file before modifying it.
+- `.ai-engine/rules/think-before-act.md` — classify non-trivial work and state the plan before implementation.
+- `.ai-engine/rules/anti-illusion-audit.md` — audit unusually strong metrics before relying on them.
 
 ## Working agreement
 
